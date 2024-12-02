@@ -3,13 +3,23 @@
     x:Class="AppApuntesCamiloBrazales.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AppApuntesCamiloBrazales"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:local="clr-namespace:AppApuntesCamiloBrazales.Views"
+    Shell.FlyoutBehavior="Flyout"
     Title="AppApuntesCamiloBrazales">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Notasss">
+        <Tab Title="Notass">
+            <ShellContent
+                Title="Camilo Brazales"
+                ContentTemplate="{DataTemplate local:ListaNotas}" />
+        </Tab>
+        <Tab Title="Sobre mi">
+            <ShellContent
+                Title="Camilo Brazales"
+                ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+
+   
 
 </Shell>
